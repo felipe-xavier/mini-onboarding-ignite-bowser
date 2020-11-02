@@ -1,2 +1,3 @@
-export * from "./welcome-screen/welcome-screen"
-export * from "./demo-screen/demo-screen"
+export * from "./goals-screen/goals-screen"
+export * from "./due-date-screen/due-date-screen"
+export * from "./activity-level-screen/activity-level-screen"
