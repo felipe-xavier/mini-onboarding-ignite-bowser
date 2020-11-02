@@ -7,7 +7,7 @@
 import React from "react"
 
 import { createNativeStackNavigator } from "react-native-screens/native-stack"
-import { GoalsScreen } from "../screens"
+import { DueDateScreen, GoalsScreen } from "../screens"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -23,6 +23,7 @@ import { GoalsScreen } from "../screens"
  */
 export type PrimaryParamList = {
   goals: undefined
+  dueDate: undefined
 }
 
 // Documentation: https://github.com/software-mansion/react-native-screens/tree/master/native-stack
@@ -37,6 +38,7 @@ export function PrimaryNavigator() {
       }}
     >
       <Stack.Screen name="goals" component={GoalsScreen} />
+      <Stack.Screen name="dueDate" component={DueDateScreen} />
     </Stack.Navigator>
   )
 }
