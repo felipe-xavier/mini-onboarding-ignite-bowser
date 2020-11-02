@@ -12,7 +12,7 @@ const defaultImage = require("./bg.png")
  */
 export function Wallpaper(props: WallpaperProps) {
   // grab the props
-  const { preset = "stretch", style: styleOverride, backgroundImage } = props
+  const { preset = "cover", style: styleOverride, backgroundImage } = props
 
   // assemble the style
   const presetToUse = presets[preset] || presets.stretch
