@@ -26,6 +26,20 @@ export const presets = {
    */
   bold: { ...BASE, fontWeight: "bold" } as TextStyle,
 
+  title: {
+    color: '#3f3f3f',
+    fontSize: 22,
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    textAlign: 'center'
+  } as TextStyle,
+
+  subtitle: {
+    color: '#5b5b5b',
+    textAlign: 'center',
+    // paddingBottom: 12,
+  } as TextStyle,
+
   /**
    * Large headers.
    */
