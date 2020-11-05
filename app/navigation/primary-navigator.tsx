@@ -7,7 +7,7 @@
 import React from "react"
 
 import { createNativeStackNavigator } from "react-native-screens/native-stack"
-import { ActivityLevelScreen, DueDateScreen, GoalsScreen } from "../screens"
+import { ActivityLevelScreen, DueDateScreen, LandingScreen, SummaryScreen } from "../screens"
 
 /**
  * This type allows TypeScript to know what routes are defined in this navigator
@@ -25,6 +25,7 @@ export type PrimaryParamList = {
   goals: undefined
   dueDate: undefined
   activityLevel: undefined
+  summary: undefined
 }
 
 // Documentation: https://github.com/software-mansion/react-native-screens/tree/master/native-stack
@@ -38,9 +39,10 @@ export function PrimaryNavigator() {
         gestureEnabled: true,
       }}
     >
-      <Stack.Screen name="goals" component={GoalsScreen} />
+      <Stack.Screen name="goals" component={LandingScreen} />
       <Stack.Screen name="dueDate" component={DueDateScreen} />
       <Stack.Screen name="activityLevel" component={ActivityLevelScreen} />
+      <Stack.Screen name="summary" component={SummaryScreen} />
     </Stack.Navigator>
   )
 }
