@@ -43,7 +43,7 @@ This is a mini on-boarding application, built with React-Native, React Navigatio
 
 1. [DatePicker](https://github.com/henninghall/react-native-date-picker)
 
-2. [slider](https://github.com/callstack/react-native-slider)
+2. [Slider](https://github.com/callstack/react-native-slider)
 
 3. [RadioButtons](https://github.com/sramezani/radio-buttons-react-native)   
    
