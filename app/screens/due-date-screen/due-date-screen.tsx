@@ -1,27 +1,76 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
-import { ViewStyle } from "react-native"
-import { Screen, Text } from "../../components"
-// import { useNavigation } from "@react-navigation/native"
-// import { useStores } from "../../models"
-import { color } from "../../theme"
+import { SafeAreaView, StyleSheet, View } from "react-native"
+import { Button, Header, Screen, Text, Wallpaper } from "../../components"
+import { useNavigation } from "@react-navigation/native"
+import DatePicker from 'react-native-date-picker'
+import { useStores } from "../../models"
+import { color, spacing } from "../../theme"
 
-const ROOT: ViewStyle = {
-  backgroundColor: color.palette.black,
-  flex: 1,
-}
+const styles = StyleSheet.create({
+  bottom: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
+  container: {
+    flex: 1,
+  },
+  datePickerView: {
+    alignItems: 'center',
+    backgroundColor: color.palette.lowWhite,
+    paddingHorizontal: spacing[4],
+  },
+  subtitleText: {
+    paddingBottom: spacing[6],
+  },
+})
 
 export const DueDateScreen = observer(function DueDateScreen() {
-  // Pull in one of our MST stores
-  // const { someStore, anotherStore } = useStores()
-  // OR
-  // const rootStore = useStores()
+  const { onBoardingStore } = useStores()
 
-  // Pull in navigation via hook
-  // const navigation = useNavigation()
+  const setDate = (date: Date) => {
+    onBoardingStore.setDueDate(date)
+  }
+
+  const navigation = useNavigation()
+  const goBack = () => navigation.goBack()
+  const nextScreen = () => navigation.navigate("activityLevel")
+
+  const addMonths = (dt, n) => {
+    return new Date(dt.setMonth(dt.getMonth() + n))
+  }
+
+  // Set restrictions for Data Picker. No less then today and no longer then 9 months from now.
+  const today = new Date()
+  const future = addMonths(new Date(), 9)
+
   return (
-    <Screen style={ROOT} preset="scroll">
-      <Text preset="header" text="dueDateScreen" />
+    <Screen style={styles.container} preset="fixed">
+      <Wallpaper />
+      <SafeAreaView>
+        <Header
+          leftIcon="back"
+          onLeftPress={goBack}
+        />
+      </SafeAreaView>
+      <SafeAreaView style={styles.bottom}>
+        <View style={styles.datePickerView}>
+          <Text preset={"title"} text="Select your estimated due date."/>
+          <Text preset={"subtitle"} style={styles.subtitleText} text="No earlier than today and no more than 9 months."/>
+          <DatePicker
+            date={onBoardingStore.dueDate ? onBoardingStore.dueDate : today}
+            onDateChange={setDate}
+            mode={'date'}
+            minimumDate={today}
+            maximumDate={future}
+          />
+        </View>
+        <Button
+          tx="welcomeScreen.continue"
+          onPress={nextScreen}
+          preset="continue"
+        />
+      </SafeAreaView>
     </Screen>
   )
 })
