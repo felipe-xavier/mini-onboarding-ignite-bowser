@@ -13,7 +13,7 @@ import { mergeAll, flatten } from "ramda"
 export function Button(props: ButtonProps) {
   // grab the props
   const {
-    preset = "primary",
+    preset = "continue",
     tx,
     text,
     style: styleOverride,
