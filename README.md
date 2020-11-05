@@ -2,11 +2,11 @@
 
 ## About
 
-This is a mini on-boarding application, built with React-Native and [Ignite Bowser](https://github.com/infinitered/ignite-bowser).
+This is a mini on-boarding application, built with React-Native, React Navigation 5, MobX State Tree and TypeScript using the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate.
 
 ## Instalation
 
-1. Make sure you have [React Native](https://reactnative.dev/) and [Yarn](https://yarnpkg.com/)
+1. Make sure you have [React Native](https://reactnative.dev/) and [Yarn](https://yarnpkg.com/) installed.
 
 2. Install your dependencies
 
