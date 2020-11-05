@@ -2,7 +2,7 @@
 
 ## About
 
-This is a mini on-boarding application, built with React-Native, React Navigation 5, MobX State Tree and TypeScript using the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate.
+This is a mini on-boarding application built with React-Native, React Navigation 5, MobX State Tree and TypeScript using the [Ignite Bowser](https://github.com/infinitered/ignite-bowser) boilerplate.
 
 ## Instalation
 
