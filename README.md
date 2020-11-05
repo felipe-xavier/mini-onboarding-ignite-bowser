@@ -1,25 +1,72 @@
 # MiniOnboarding
 
-[![CircleCI](https://circleci.com/gh/infinitered/ignite-bowser.svg?style=svg)](https://circleci.com/gh/infinitered/ignite-bowser)
+## About
 
-## The latest and greatest boilerplate for Infinite Red opinions
+This is a mini on-boarding application, built with React-Native and [Ignite Bowser](https://github.com/infinitered/ignite-bowser).
 
-This is the boilerplate that [Infinite Red](https://infinite.red) uses as a way to test bleeding-edge changes to our React Native stack.
+## Instalation
 
+1. Make sure you have [React Native](https://reactnative.dev/) and [Yarn](https://yarnpkg.com/)
+
+2. Install your dependencies
+
+    ```
+    cd path/to/mini-onboarding-ignite-bowser
+    yarn install
+    ```
+   
+3. Test the code
+
+    ```
+    yarn test
+    ```
+
+4. Or just the implemented model
+
+    ```
+    yarn test on-boarding-store
+    ```
+
+5. Start your app
+
+    ```
+    yarn start
+    ```
+
+6. Deploy on your device/emulator
+
+    ```
+    yarn ios/android
+    ```
+   
+## Extra packages
+
+1. [DatePicker](https://github.com/henninghall/react-native-date-picker)
+
+2. [slider](https://github.com/callstack/react-native-slider)
+
+3. [RadioButtons](https://github.com/sramezani/radio-buttons-react-native)   
+   
+## Screens
+
+Below are the 4 screens for the mini on-boarding app.
+
+![image info](./screens/screen1.jpg) ![image info](./screens/screen2.jpg) ![image info](./screens/screen3.jpg) ![image info](./screens/screen4.jpg)   
+   
+## Ignite README
 Currently includes:
 
 - React Native
 - React Navigation
 - MobX State Tree
 - TypeScript
-- And more!
 
 ## Quick Start
 
-The Ignite Bowser boilerplate project's structure will look similar to this:
+The Ignite Bowser boilerplate project's structure will look similar to this with some adaptations:
 
 ```
-ignite-project
+project
 ├── app
 │   ├── components
 │   ├── i18n
@@ -30,11 +77,6 @@ ignite-project
 │   ├── services
 │   ├── theme
 │   ├── app.tsx
-├── storybook
-│   ├── views
-│   ├── index.ts
-│   ├── storybook-registry.ts
-│   ├── storybook.ts
 ├── test
 │   ├── __snapshots__
 │   ├── storyshots.test.ts.snap
@@ -116,27 +158,6 @@ This is a great place to put miscellaneous helpers and utilities. Things like da
 
 The `ignite` directory stores all things Ignite, including CLI and boilerplate items. Here you will find generators, plugins and examples to help you get started with React Native.
 
-### ./storybook directory
-
-This is where your stories will be registered and where the Storybook configs will live
-
 ### ./test directory
 
 This directory will hold your Jest configs and mocks, as well as your [storyshots](https://github.com/storybooks/storybook/tree/master/addons/storyshots) test file. This is a file that contains the snapshots of all your component storybooks.
-
-## Running Storybook
-
-From the command line in your generated app's root directory, enter `yarn run storybook`
-This starts up the storybook server.
-
-In `index.js`, change `SHOW_STORYBOOK` to `true` and reload the app.
-For Visual Studio Code users, there is a handy extension that makes it easy to load Storybook use cases into a running emulator via tapping on items in the editor sidebar. Install the `React Native Storybook` extension by `Orta`, hit `cmd + shift + P` and select "Reconnect Storybook to VSCode". Expand the STORYBOOK section in the sidebar to see all use cases for components that have `.story.tsx` files in their directories.
-
-## Previous Boilerplates
-
-- [2017 aka Andross](https://github.com/infinitered/ignite-andross)
-- [2016 aka Ignite 1.0](https://github.com/infinitered/ignite-ir-boilerplate-2016)
-
-## Premium Support
-
-[Ignite CLI](https://infinite.red/ignite), [Ignite Andross](https://github.com/infinitered/ignite-andross), and [Ignite Bowser](https://github.com/infinitered/ignite-bowser), as open source projects, are free to use and always will be. [Infinite Red](https://infinite.red/) offers premium Ignite support and general mobile app design/development services. Email us at [hello@infinite.red](mailto:hello@infinite.red) to get in touch with us for more details.
