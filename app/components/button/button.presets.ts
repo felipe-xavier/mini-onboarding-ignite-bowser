@@ -17,6 +17,15 @@ const BASE_TEXT: TextStyle = {
   paddingHorizontal: spacing[3],
 }
 
+const BOTTOM_BUTTON: TextStyle = {
+  ...BASE_TEXT,
+  color: color.palette.white,
+  fontFamily: typography.primary,
+  fontSize: 16,
+  fontWeight: "bold",
+  letterSpacing: 2,
+}
+
 /**
  * All the variations of text styling within the app.
  *
@@ -46,23 +55,9 @@ export const viewPresets = {
 export const textPresets = {
   primary: { ...BASE_TEXT, fontSize: 9, color: color.palette.white } as TextStyle,
 
-  continue: {
-    ...BASE_TEXT,
-    color: color.palette.white,
-    fontFamily: typography.primary,
-    fontSize: 16,
-    fontWeight: "bold",
-    letterSpacing: 2,
-  } as TextStyle,
+  continue: { ...BOTTOM_BUTTON } as TextStyle,
 
-  disabled: {
-    ...BASE_TEXT,
-    color: color.palette.white,
-    fontFamily: typography.primary,
-    fontSize: 16,
-    fontWeight: "bold",
-    letterSpacing: 2,
-  } as TextStyle,
+  disabled: { ...BOTTOM_BUTTON } as TextStyle,
 
   link: {
     ...BASE_TEXT,
