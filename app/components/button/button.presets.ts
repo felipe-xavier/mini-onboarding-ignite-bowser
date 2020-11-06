@@ -55,6 +55,15 @@ export const textPresets = {
     letterSpacing: 2,
   } as TextStyle,
 
+  disabled: {
+    ...BASE_TEXT,
+    color: color.palette.white,
+    fontFamily: typography.primary,
+    fontSize: 16,
+    fontWeight: "bold",
+    letterSpacing: 2,
+  } as TextStyle,
+
   link: {
     ...BASE_TEXT,
     color: color.text,
