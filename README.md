@@ -41,17 +41,23 @@ This is a mini on-boarding application built with React-Native, React Navigation
    
 ## Extra packages
 
-1. [DatePicker](https://github.com/henninghall/react-native-date-picker)
+1. [RadioButtons](https://github.com/sramezani/radio-buttons-react-native)
 
-2. [Slider](https://github.com/callstack/react-native-slider)
+2. [DatePicker](https://github.com/henninghall/react-native-date-picker)
 
-3. [RadioButtons](https://github.com/sramezani/radio-buttons-react-native)   
+3. [Slider](https://github.com/callstack/react-native-slider)
    
 ## Screens
 
 Below are the 4 screens for the mini on-boarding app.
 
-![image info](./screens/screen1.jpg) ![image info](./screens/screen2.jpg) ![image info](./screens/screen3.jpg) ![image info](./screens/screen4.jpg)   
+![image info](./screens/screen1.jpg) 
+
+![image info](./screens/screen2.jpg) 
+
+![image info](./screens/screen3.jpg) 
+
+![image info](./screens/screen4.jpg)   
    
 ## Ignite README
 Currently includes:
