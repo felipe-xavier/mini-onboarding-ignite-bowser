@@ -1,7 +1,7 @@
 import React from "react"
 import { observer } from "mobx-react-lite"
 import { SafeAreaView, StyleSheet, View } from "react-native"
-import { Header, Screen, Text, Wallpaper } from "../../components"
+import { Button, Header, Screen, Text, Wallpaper } from "../../components"
 import { useNavigation } from "@react-navigation/native"
 import { useStores } from "../../models"
 import { color } from "../../theme"
@@ -10,6 +10,10 @@ import levels from '../../utils/activity-levels'
 const bgImage = require('../../components/wallpaper/clouds.png')
 
 const styles = StyleSheet.create({
+  bottom: {
+    flex: 1,
+    justifyContent: 'flex-end',
+  },
   container: {
     flex: 1
   },
@@ -42,6 +46,8 @@ export const SummaryScreen = observer(function SummaryScreen() {
   const navigation = useNavigation()
   const goBack = () => navigation.goBack()
 
+  const homeScreen = () => navigation.navigate("goals")
+
   return (
     <Screen style={styles.container} preset="fixed">
       <Wallpaper
@@ -61,10 +67,14 @@ export const SummaryScreen = observer(function SummaryScreen() {
         <Text style={styles.itemText} text={"Activity Level: " + levels[onBoardingStore.activityLevel]}/>
       </View>
 
-      {/* eslint-disable-next-line react-native/no-inline-styles */}
-      <View style={{ flex: 1 }}>
-
-      </View>
+      <SafeAreaView style={styles.bottom}>
+        <Button
+          onPress={homeScreen}
+          preset={"continue"}
+          text={"START OVER"}
+          disabled={!onBoardingStore.goal}
+        />
+      </SafeAreaView>
 
     </Screen>
   )
