@@ -27,16 +27,15 @@ const styles = StyleSheet.create({
     margin: spacing[4],
     paddingVertical: spacing[5]
   },
-  // eslint-disable-next-line react-native/no-color-literals
   textLevel: {
-    color: '#3f3f3f',
+    color: color.palette.darkGrey,
     fontSize: 18,
     paddingVertical: spacing[5],
     textAlign: 'center'
   },
   // eslint-disable-next-line react-native/no-color-literals
   wallpaper: {
-    backgroundColor: "#fff",
+    backgroundColor: color.palette.white,
     resizeMode: "center"
   },
 
