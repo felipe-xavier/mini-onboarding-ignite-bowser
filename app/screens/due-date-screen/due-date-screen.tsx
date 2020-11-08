@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
   },
 })
 
+const addMonths = (dt, n) => {
+  return new Date(dt.setMonth(dt.getMonth() + n))
+}
+
+// Set restrictions for Data Picker. No less then today and no longer then 9 months from now.
+const today = new Date()
+const future = addMonths(new Date(), 9)
+
 export const DueDateScreen = observer(function DueDateScreen() {
   const { onBoardingStore } = useStores()
 
@@ -35,14 +43,6 @@ export const DueDateScreen = observer(function DueDateScreen() {
   const navigation = useNavigation()
   const goBack = () => navigation.goBack()
   const nextScreen = () => navigation.navigate("activityLevel")
-
-  const addMonths = (dt, n) => {
-    return new Date(dt.setMonth(dt.getMonth() + n))
-  }
-
-  // Set restrictions for Data Picker. No less then today and no longer then 9 months from now.
-  const today = new Date()
-  const future = addMonths(new Date(), 9)
 
   return (
     <Screen style={styles.container} preset="fixed">
